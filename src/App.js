@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [todos, setTodos] = useState(['First Item','Second Item'])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World!! 😁</h1>
+      <input/>
+      <button>Add Item</button>
+      <ul>
+        {todos.map((data,index)=>{
+          return(
+          <li>{data}</li>
+          )
+
+        })}
+        {/* <li>First Item</li>
+        <li>Second Item</li> */}
+      </ul>
     </div>
   );
 }
